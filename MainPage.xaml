@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CONTADOR_MANUAL.MainPage">
+    
+
+    <ScrollView>
+        <StackLayout VerticalOptions="CenterAndExpand" Margin="16"
+Spacing="10">
+            <Label Text="Conteo:" Margin="4" />
+            <Border Margin="4">
+                <Label x:Name="ConteoLabel" Text="0" Padding="8"
+Margin="16" FontSize="Medium" FontAttributes="Bold"
+HorizontalTextAlignment="Center" />
+            </Border>
+            <StackLayout Orientation="Horizontal" Spacing="16"
+HorizontalOptions="Center">
+                <Button Text="iniciar conteo" WidthRequest="170"
+Clicked="OnContarButtonClicked" />
+                <Button Text="Reiniciar el conteo" WidthRequest="160"
+Clicked="OnReiniciarButtonClicked" />
+            </StackLayout>
+            <Slider x:Name="IncrementSlider" Maximum="20" Minimum="1"
+Value="1" ValueChanged="OnIncrementValueChanged" />
+            <Label x:Name="IncrementLabel" Text="Incremento: 1"
+HorizontalTextAlignment="Center" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
